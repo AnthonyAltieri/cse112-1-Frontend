@@ -1,0 +1,170 @@
+/*@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);*/
+
+:root {
+--white: #ecf0f1;
+--blue: #2c3e50;
+--green: #27ae60;
+--red: #e74c3c;
+--breakpoint: 30em;
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.setInputs {
+	margin-top: 20px;
+}
+
+.paramList {
+	margin-top: 100px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 3.5em;
+  background: var(--white);
+}
+@media (max-width: var(--breakpoint)) {
+  body {
+    padding: 1.875em;
+  }
+}
+html {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  max-width: 25em;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.submitButton {
+  display: block;
+  color: white !important;
+  width: 100px;
+  height: 42px;
+  text-align: center;
+  line-height: 42px;
+  margin: 8px auto;
+  background: var(--green);
+  /*&:focus {
+    @include box-shadow(none);
+  }
+  &:active {
+    background: darken(var(--green), 5%);
+  }
+  @media (max-width: var(--breakpoint) {
+    width: 100%;
+  }*/
+}
+
+textarea {
+  max-width: 25em;
+  min-height: 5.625em;
+  max-height: 12.5em;
+  width: 100%;
+  color: var(--blue);
+}
+h1 {
+  font-size: 1.5em;
+  color: var(--blue);
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--blue);
+  background: darken(--white, 10%);
+  padding: 1em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  /*appearance: none;
+  @include border-radius(none);
+  &:focus {
+    @include box-shadow(var(--blue) 0 0 0 2px inset);
+  }*/
+}
+
+
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  margin: 0.75em 0 0.75em 0;
+}
+
+
+
+.smart-placeholder {
+  font-size: .875em;
+  color: darken(var(--white), 40%);
+  margin: 0.75em 0 0 1.125em;
+}
+
+.parsley-error {
+  @include box-shadow(var(--red) 0 0 0 2px inset);
+}
+
+textarea + .parsley-errors-list {
+  margin-top: -.25em;
+}
+
+.parsley-custom-error-message {
+  list-style: none;
+  font-size: .875em;
+  color: var(--red);
+  margin: 0.3em 0 0 0;
+}
+
+::-webkit-input-placeholder {
+  color: darken(var(--white), 30%);
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: darken(var(--white), 30%);
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: darken(var(--white), 30%);
+  text-align: center;
+}
+
+:-ms-input-placeholder {  
+  color: darken(var(--white), 30%);
+  text-align: center;
+}
+
+.success {
+  display: none;
+  color: var(--blue);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5em;
+}
+.name {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1.125em;
+}
+
+@media (max-width: var(--breakpoint)) {
+    .success {
+      font-size: .875em;
+
+    }
+}
